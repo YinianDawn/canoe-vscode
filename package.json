@@ -13,7 +13,7 @@
 	"categories": [
 		"Programming Languages"
 	],
-	"icon": "./images/canoe.png",
+	"icon": "https://github.com/YinianDawn/canoe-vscode/blob/master/images/canoe.png",
 	"activationEvents": [
 		"onCommand:extension.helloWorld"
 	],
