@@ -1,0 +1,92 @@
+{
+	"name": "canoe",
+	"displayName": "canoe",
+	"description": "canoe",
+	"keywords": [
+		"canoe"
+	],
+	"version": "0.0.1",
+	"publisher": "dawn",
+	"engines": {
+		"vscode": "^1.41.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"icon": "./images/canoe.png",
+	"activationEvents": [
+		"onCommand:extension.helloWorld"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "canoe",
+			"properties": {
+				"canoe.yourName": {
+					"type": "string",
+					"default": "guest",
+					"description": "你的名字"
+				},
+				"canoe.showTip": {
+					"type": "boolean",
+					"default": true,
+					"description": "是否在每次启动时显示欢迎提示！"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "extension.helloWorld",
+				"title": "Hello World"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.helloWorld",
+				"key": "ctrl+f10",
+				"mac": "cmd+f10",
+				"when": "editorTextFocus"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "editorFocus",
+					"command": "extension.helloWorld",
+					"group": "navigation"
+				}
+			]
+		},
+		"languages": [
+			{
+				"id": "canoe",
+				"extensions": [
+					".canoe"
+				],
+				"aliases": [
+					"Canoe"
+				],
+				"filenames": [],
+				"configuration": "./src/language-configuration.json"
+			}
+		]
+	},
+	"scripts": {
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.41.0",
+		"eslint": "^6.6.0",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"typescript": "^3.6.4",
+		"vscode-test": "^1.2.2"
+	},
+	"dependencies": {
+		"vsce": "^1.71.0"
+	}
+}
