@@ -1,11 +1,11 @@
 {
 	"name": "canoe",
-	"displayName": "canoe",
-	"description": "canoe",
+	"displayName": "Canoe",
+	"description": "Canoe",
 	"keywords": [
-		"canoe"
+		"canoe", "Canoe"
 	],
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "dawn",
 	"engines": {
 		"vscode": "^1.41.0"
@@ -13,7 +13,7 @@
 	"categories": [
 		"Programming Languages"
 	],
-	"icon": "https://github.com/YinianDawn/canoe-vscode/blob/master/images/canoe.png",
+	"icon": "images/canoe.png",
 	"activationEvents": [
 		"onCommand:extension.helloWorld"
 	],
@@ -21,7 +21,7 @@
 	"contributes": {
 		"configuration": {
 			"type": "object",
-			"title": "canoe",
+			"title": "Canoe",
 			"properties": {
 				"canoe.yourName": {
 					"type": "string",
